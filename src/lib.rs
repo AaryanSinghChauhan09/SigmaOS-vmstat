@@ -1,14 +1,7 @@
-//! SigmaOS vmstat component
-//!
-//! This component provides vmstat functionality for SigmaOS.
+//! SigmaOS-vmstat — Virtual memory statistics model.
 
-#![no_std]
+pub mod util;
+pub mod options;
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
-}
+pub use util::{Vmstat, MemStats};
+pub use options::{VmstatOptions, Mode};
